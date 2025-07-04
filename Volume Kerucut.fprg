@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Volume Kerucut"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-11 03:29:30 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTExOzAyOjUzOjQ1IHBtOzI5NzU="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTExOzAzOjI5OjMwIHBtOzE7MzA4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Kelilingkerucut" type="String" array="False" size=""/>
+            <declare name="phi" type="Real" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="s" type="Real" array="False" size=""/>
+            <declare name="r" type="Real" array="False" size=""/>
+            <assign variable="phi" expression="22/7"/>
+            <assign variable="t" expression="10"/>
+            <assign variable="r" expression="7"/>
+            <assign variable="s" expression="(r^2 + 100)^1/2"/>
+            <input variable="Kelilingkerucut"/>
+            <output expression="phi*r*s+phi*r^2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

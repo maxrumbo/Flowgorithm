@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="recursion +10"/>
+        <attribute name="authors" value="boyha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-05 08:13:11 pm"/>
+        <attribute name="created" value="Ym95aGE7Qk9ZOzIwMjQtMTEtMDU7MDk6MDQ6NDUgUE07MjA0Ng=="/>
+        <attribute name="edited" value="Ym95aGE7Qk9ZOzIwMjQtMTEtMDU7MDk6MTA6MDYgUE07MTsyMTQ4"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTExLTA1OzA4OjEzOjExIHBtOzE7MzA3NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, hasil" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="10"/>
+            <assign variable="hasil" expression="recursion(n)"/>
+            <output expression="hasil" newline="True"/>
+        </body>
+    </function>
+    <function name="recursion" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <if expression="n==1">
+                <then>
+                    <assign variable="hasil" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="hasil" expression="recursion(n-1)+n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

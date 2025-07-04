@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="pohonnatal2"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-22 04:12:01 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIyOzAzOjU4OjQwIHBtOzI5NzA="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIyOzA0OjEyOjAxIHBtOzE7MzA2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <declare name="teks" type="String" array="False" size=""/>
+            <for variable="a" start="0" end="4" direction="inc" step="1">
+                <assign variable="teks" expression="&quot;&quot;"/>
+                <for variable="b" start="4" end="a" direction="dec" step="1">
+                    <assign variable="teks" expression="teks &amp; &quot;&quot;"/>
+                </for>
+                <for variable="b" start="0" end="a" direction="dec" step="1">
+                    <assign variable="teks" expression="teks &amp; &quot;*&quot;"/>
+                </for>
+                <for variable="b" start="a-1" end="0" direction="dec" step="1">
+                    <assign variable="teks" expression="teks &amp; &quot;*&quot;"/>
+                </for>
+                <output expression="teks" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
