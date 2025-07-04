@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Indeks Elemen"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-13 11:42:39 am"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTEzOzExOjM1OjUyIGFtOzI5NjA="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTEzOzExOjQyOjM5IGFtOzE7MzA3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="6"/>
+            <assign variable="a[0]" expression="1"/>
+            <assign variable="a[1]" expression="2"/>
+            <assign variable="a[2]" expression="3"/>
+            <assign variable="a[3]" expression="4"/>
+            <assign variable="a[4]" expression="5"/>
+            <assign variable="a[5]" expression="6"/>
+            <output expression="a[1]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

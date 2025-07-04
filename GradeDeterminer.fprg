@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="NilaiAkhir"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 09:26:05 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTI1OzA4OjEyOjM0IHBtOzI5Nzk="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTI1OzA5OjI2OjA1IHBtOzY7MzA5Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NamaMatkul, Pengampu, GradeAkhir, Kelulusan" type="String" array="False" size=""/>
+            <declare name="KodeMatkul" type="Integer" array="False" size=""/>
+            <declare name="Grade, A, AB, B, BC, C, D, E, none" type="String" array="False" size=""/>
+            <declare name="NilaiUTS, NilaiUAS, RataRataQuiz, NilaiTugas, NA" type="Real" array="False" size=""/>
+            <input variable="KodeMatkul"/>
+            <input variable="NamaMatkul"/>
+            <input variable="Pengampu"/>
+            <input variable="NilaiUTS"/>
+            <input variable="NilaiUAS"/>
+            <input variable="RataRataQuiz"/>
+            <input variable="NilaiTugas"/>
+            <assign variable="NA" expression="(NilaiUTS*0.25+NilaiUAS*0.25+RataRataQuiz*0.30+NilaiTugas*0.20)"/>
+            <if expression="NA &gt;=0 &amp;&amp; NA &lt;=100">
+                <then>
+                    <if expression="NA &gt;= 79.5 &amp;&amp; NA &lt;100">
+                        <then>
+                            <assign variable="Grade" expression="&quot;A&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="NA&gt;=72 &amp;&amp; NA&lt; 79.5">
+                                <then>
+                                    <assign variable="Grade" expression="&quot;AB&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="NA&gt;=64 &amp;&amp; NA&lt; 72">
+                                        <then>
+                                            <assign variable="Grade" expression="&quot;B&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="NA&gt;=57 &amp;&amp; NA&lt; 64.5">
+                                                <then>
+                                                    <assign variable="Grade" expression="&quot;BC&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="NA&gt;=49.5 &amp;&amp; NA&lt; 57">
+                                                        <then>
+                                                            <assign variable="Grade" expression="&quot;C&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="NA&gt;=34 &amp;&amp; NA&lt; 49.5">
+                                                                <then>
+                                                                    <assign variable="Grade" expression="&quot;D&quot;"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="NA&gt;=0 &amp;&amp; NA &lt;34">
+                                                                        <then>
+                                                                            <assign variable="Grade" expression="&quot;E&quot;"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <assign variable="Grade" expression="&quot;none&quot;"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;ULANG OI&quot;" newline="True"/>
+                    <call expression="main"/>
+                </else>
+            </if>
+            <if expression="NA &gt;= 49.5">
+                <then>
+                    <assign variable="Kelulusan" expression="&quot;LULUS&quot;"/>
+                </then>
+                <else>
+                    <assign variable="Kelulusan" expression="&quot;TidakLulus&quot;"/>
+                </else>
+            </if>
+            <output expression="KodeMatkul&amp;&quot;|&quot;&amp;NamaMatkul&amp;&quot;|&quot;&amp;Pengampu&amp;&quot;|&quot;&amp;NilaiUTS&amp;&quot;|&quot;&amp;NilaiUAS&amp;&quot;|&quot;&amp;RataRataQuiz&amp;&quot;|&quot;&amp;NilaiTugas&amp;&quot;|&quot;&amp;Grade&amp;&quot;|&quot;&amp;NA&amp;&quot;|&quot;&amp;Kelulusan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

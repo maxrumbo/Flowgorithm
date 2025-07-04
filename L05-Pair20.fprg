@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="perpustakaan"/>
+        <attribute name="authors" value="boyha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 09:01:21 PM"/>
+        <attribute name="created" value="Ym95aGE7Qk9ZOzIwMjQtMTAtMjM7MDQ6MDU6MzUgUE07MjA0MA=="/>
+        <attribute name="edited" value="Ym95aGE7Qk9ZOzIwMjQtMTAtMjM7MDk6MDE6MjEgUE07MjsyMTQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="judul, jenis, rak1, rak2" type="String" array="True" size="3"/>
+            <declare name="rak3" type="String" array="False" size=""/>
+            <assign variable="rak3" expression="&quot;&quot;"/>
+            <declare name="i, j, k, l, v, b" type="Integer" array="False" size=""/>
+            <assign variable="v" expression="0"/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <input variable="judul[i]"/>
+            </for>
+            <for variable="k" start="0" end="2" direction="inc" step="1">
+                <input variable="jenis[k]"/>
+            </for>
+            <assign variable="k" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <for variable="j" start="0" end="2" direction="inc" step="1">
+                <if expression="jenis[j]=&quot;novel&quot;">
+                    <then>
+                        <assign variable="rak1[k]" expression="judul[j]"/>
+                        <assign variable="k" expression="k+1"/>
+                    </then>
+                    <else>
+                        <if expression="jenis[j]=&quot;fiksi&quot;">
+                            <then>
+                                <assign variable="rak2[i]" expression="judul[j]"/>
+                                <assign variable="i" expression="i+1"/>
+                            </then>
+                            <else>
+                                <assign variable="rak3" expression="&quot;&quot;"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Rak Novel : &quot;" newline="True"/>
+            <for variable="b" start="0" end="k - 1" direction="inc" step="1">
+                <output expression="&quot;- &quot; &amp;rak1[b]" newline="True"/>
+            </for>
+            <output expression="&quot;Rak Fiksi: &quot;" newline="True"/>
+            <for variable="l" start="0" end="i - 1" direction="inc" step="1">
+                <output expression="&quot;- &quot; &amp;rak2[l]" newline="True"/>
+            </for>
+            <output expression="&quot;Rak Lainnya: &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

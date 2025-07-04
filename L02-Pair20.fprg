@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="L02-Pair20"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 04:45:15 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIzOzA0OjEyOjM1IHBtOzI5NjY="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIzOzA0OjQ1OjE1IHBtOzE7MzA3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kode" type="String" array="False" size=""/>
+            <declare name="dosen, mahasiswa, staff, civitasdel" type="Integer" array="False" size=""/>
+            <assign variable="dosen" expression="0"/>
+            <assign variable="mahasiswa" expression="0"/>
+            <assign variable="staff" expression="0"/>
+            <do expression="kode!=&quot;---&quot;">
+                <input variable="kode"/>
+                <if expression="kode = &quot;---&quot;">
+                    <then>
+                        <assign variable="kode" expression="kode"/>
+                    </then>
+                    <else>
+                        <if expression="kode=&quot;12SI&quot;">
+                            <then>
+                                <assign variable="mahasiswa" expression="mahasiswa+1"/>
+                            </then>
+                            <else>
+                                <if expression="kode=&quot;55DS&quot;">
+                                    <then>
+                                        <assign variable="dosen" expression="dosen+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="kode=&quot;99SF&quot;">
+                                            <then>
+                                                <assign variable="staff" expression="staff + 1"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="kode" expression="&quot;&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="mahasiswa&amp;&quot;|&quot;&amp;dosen&amp;&quot;|&quot;&amp;staff" newline="True"/>
+                <assign variable="civitasdel" expression="dosen + mahasiswa + staff"/>
+                <output expression="civitasdel" newline="True"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

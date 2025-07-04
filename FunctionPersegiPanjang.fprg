@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="FunctionPersegiPanjang"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-30 07:55:08 am"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTI5OzA4OjU2OjQ5IHBtOzI5ODk="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTMwOzA3OjU1OjA4IGFtOzE7MzA2Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="persegipanjang"/>
+        </body>
+    </function>
+    <function name="persegipanjang" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="p, l, luas" type="Integer" array="False" size=""/>
+            <assign variable="p" expression="5"/>
+            <assign variable="l" expression="10"/>
+            <assign variable="luas" expression="p*l"/>
+            <output expression="luas" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

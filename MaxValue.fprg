@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="mencari nilai terbesar"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-05 04:18:44 pm"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0xMS0wNTswMzo0OTo0OSBQTTsyNjE2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0xMS0wNTswNDozOTo0NyBQTTsxOzI3MjI="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTExLTA1OzA0OjE4OjQ0IHBtOzE7MzA4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="max, i, jumlah" type="Integer" array="False" size=""/>
+            <declare name="angka" type="Integer" array="True" size="5"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="jumlah" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="angka[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <if expression="angka[i]&gt;jumlah">
+                    <then>
+                        <assign variable="max" expression="angka[i]"/>
+                        <assign variable="jumlah" expression="angka[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

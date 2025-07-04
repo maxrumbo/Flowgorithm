@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="L01-Pair 20"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 03:57:51 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIzOzAzOjQ4OjEwIHBtOzI5Njc="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIzOzAzOjU3OjUxIHBtOzE7MzA4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sum, i" type="Integer" array="False" size=""/>
+            <declare name="Angka" type="Integer" array="True" size="10"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="angka[i]"/>
+                <assign variable="sum" expression="sum+angka[i]"/>
+            </for>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
