@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Q01"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-14 09:03:28 am"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTA5OzAyOjMzOjIwIHBtOzI5NjU="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTExLTE0OzA5OjAzOjI4IGFtOzQ7MzA3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="Min, JumlahBuku, Transaksi" type="Real" array="False" size=""/>
+            <declare name="HargaBuku" type="Real" array="True" size="100"/>
+            <assign variable="Min" expression="0"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="JumlahBuku" expression="0"/>
+            <input variable="Hargabuku[n]"/>
+            <assign variable="Min" expression="HargaBuku[n]"/>
+            <while expression="HargaBuku[n]!=0">
+                <assign variable="JumlahBuku" expression="JumlahBuku+HargaBuku[n]"/>
+                <if expression="Min &lt; HargaBuku[n]">
+                    <then>
+                        <assign variable="Min" expression="Min"/>
+                    </then>
+                    <else>
+                        <assign variable="Min" expression="HargaBuku[n]"/>
+                    </else>
+                </if>
+                <assign variable="n" expression="n+1"/>
+                <input variable="HargaBuku[n]"/>
+            </while>
+            <if expression="JumlahBuku&gt;=100.00">
+                <then>
+                    <assign variable="Transaksi" expression="JumlahBuku-Min"/>
+                </then>
+                <else>
+                    <assign variable="Transaksi" expression="JumlahBuku"/>
+                </else>
+            </if>
+            <output expression="ToFixed(Transaksi,2)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
