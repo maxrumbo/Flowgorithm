@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="JumlahAngka"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 01:27:14 pm"/>
+        <attribute name="created" value="QVNVUztST05ZOzIwMjQtMTAtMDE7MDM6NTQ6NDAgUE07MTkxNA=="/>
+        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTAtMDE7MDQ6NDY6MTkgUE07MTsyMDMw"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTAyOzAxOjI3OjE0IHBtOzE7MzA3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, sum" type="Integer" array="False" size=""/>
+            <declare name="angka" type="Integer" array="True" size="5"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="angka[i]"/>
+                <assign variable="sum" expression="sum+angka[i]"/>
+            </for>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

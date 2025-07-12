@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="L04"/>
+        <attribute name="authors" value="Henry Kevin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 04:50:05 pm"/>
+        <attribute name="created" value="SGVucnkgS2V2aW47TEFQVE9QLURNMERHUzBLOzIwMjQtMTAtMjM7MDQ6MjI6MTkgUE07MzM4Mg=="/>
+        <attribute name="edited" value="SGVucnkgS2V2aW47TEFQVE9QLURNMERHUzBLOzIwMjQtMTAtMjM7MDQ6NDM6NTYgUE07MjszNDk1"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIzOzA0OjUwOjA1IHBtOzE7MzA3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, JumlahBaris" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan angka pada JumlahBaris pada pohon : &quot;" newline="False"/>
+            <input variable="JumlahBaris"/>
+            <assign variable="c" expression="JumlahBaris"/>
+            <for variable="a" start="1" end="JumlahBaris" direction="inc" step="1">
+                <for variable="b" start="1" end="JumlahBaris" direction="inc" step="1">
+                    <if expression="b &gt;= c">
+                        <then>
+                            <output expression="&quot;   *  &quot;" newline="False"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;   &quot;" newline="False"/>
+                        </else>
+                    </if>
+                </for>
+                <assign variable="c" expression="c - 1"/>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

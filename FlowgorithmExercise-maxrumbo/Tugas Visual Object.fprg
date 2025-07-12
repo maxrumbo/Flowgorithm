@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tugas Visual Object"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-28 11:07:24 am"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA4LTI4OzEwOjA3OjA0IGFtOzI5NjA="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA4LTI4OzExOjA3OjI0IGFtOzE7MzA3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <input variable="p"/>
+            <input variable="q"/>
+            <assign variable="p" expression="q + 5"/>
+            <assign variable="q" expression="p - 5"/>
+            <output expression="&quot;Hasil dari p + q =&quot;" newline="True"/>
+            <output expression="p" newline="True"/>
+            <output expression="q" newline="True"/>
+            <if expression="p&gt;=10">
+                <then>
+                    <output expression="&quot;UNGGUL&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;BAIK&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

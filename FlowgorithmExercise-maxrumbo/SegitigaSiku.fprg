@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="pohonnatal"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-22 03:55:20 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIyOzAzOjQ3OjQzIHBtOzI5NzE="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTIyOzAzOjU1OjIwIHBtOzE7MzA3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Segitiga, Segitiga1" type="String" array="False" size=""/>
+            <assign variable="Segitiga" expression="&quot;*&quot;"/>
+            <assign variable="Segitiga1" expression="&quot;*&quot;"/>
+            <while expression="Segitiga!=&quot;*******************************************************************************&quot;">
+                <output expression="Segitiga" newline="True"/>
+                <assign variable="Segitiga" expression="Segitiga&amp;Segitiga1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

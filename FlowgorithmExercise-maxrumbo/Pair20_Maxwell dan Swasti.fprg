@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="testes"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-30 05:37:39 pm"/>
+        <attribute name="created" value="QVNVUztST05ZOzIwMjQtMTAtMzA7MTA6NTU6MjMgQU07MTkwMQ=="/>
+        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTAtMzA7MDQ6MTA6MTIgUE07NzsyMDIy"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTMwOzA1OjM3OjM5IHBtOzI7MzA4NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gaji, hari, total, gajikotor, gajibonus, gajipajak" type="Integer" array="False" size=""/>
+            <declare name="bonus, pajak" type="Real" array="False" size=""/>
+            <assign variable="gaji" expression="100000"/>
+            <assign variable="bonus" expression="0.03"/>
+            <assign variable="pajak" expression="0.13"/>
+            <input variable="hari"/>
+            <assign variable="gajikotor" expression="pendapatan1(gaji,hari)"/>
+            <assign variable="gajibonus" expression="pendapatan2(gaji,hari,bonus)"/>
+            <assign variable="gajipajak" expression="pendapatan3(gaji,pajak)"/>
+            <call expression="total(gajikotor,gajibonus,gajipajak)"/>
+        </body>
+    </function>
+    <function name="pendapatan1" type="Integer" variable="gajikotor">
+        <parameters>
+            <parameter name="gaji" type="Integer" array="False"/>
+            <parameter name="hari" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="gajikotor" type="Integer" array="False" size=""/>
+            <assign variable="gajikotor" expression="gaji*hari"/>
+        </body>
+    </function>
+    <function name="pendapatan2" type="Integer" variable="gajibonus">
+        <parameters>
+            <parameter name="gaji" type="Integer" array="False"/>
+            <parameter name="hari" type="Integer" array="False"/>
+            <parameter name="bonus" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="gajibonus" type="Integer" array="False" size=""/>
+            <if expression="hari&gt;=30">
+                <then>
+                    <assign variable="gajibonus" expression="gaji*bonus"/>
+                </then>
+                <else>
+                    <assign variable="gajibonus" expression="0"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="pendapatan3" type="Integer" variable="gajipajak">
+        <parameters>
+            <parameter name="gaji" type="Integer" array="False"/>
+            <parameter name="pajak" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="gajipajak" type="Integer" array="False" size=""/>
+            <assign variable="gajipajak" expression="gaji*pajak"/>
+        </body>
+    </function>
+    <function name="total" type="Integer" variable="totalgaji">
+        <parameters>
+            <parameter name="gajikotor" type="Integer" array="False"/>
+            <parameter name="gajibonus" type="Integer" array="False"/>
+            <parameter name="gajipajak" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="totalgaji" type="Integer" array="False" size=""/>
+            <assign variable="totalgaji" expression="gajikotor+gajibonus-gajipajak"/>
+            <output expression="totalgaji" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

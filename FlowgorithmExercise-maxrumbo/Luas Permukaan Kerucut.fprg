@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Luas Permukaan Kerucut"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-11 08:47:54 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTExOzA4OjI3OjUzIHBtOzI5ODE="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTExOzA4OjQ3OjU0IHBtOzE7MzA5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L, phi, r, s, t" type="Real" array="False" size=""/>
+            <input variable="r"/>
+            <input variable="t"/>
+            <assign variable="s" expression="(r^2+t^2)^1/2"/>
+            <assign variable="phi" expression="3.14"/>
+            <assign variable="L" expression="phi*r *(s + r)"/>
+            <output expression="L" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

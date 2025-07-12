@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="segitiga_siku_bintang"/>
+        <attribute name="authors" value="Rony Pangaribuan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-30 09:43:23 am"/>
+        <attribute name="created" value="RnJhbmsgTmlyb3k7RlJBTks7MjAyNC0xMC0yMzswMy4yMy4zMCBQTTsyNjc0"/>
+        <attribute name="edited" value="RnJhbmsgTmlyb3k7RlJBTks7MjAyNC0xMC0yMzswOC4yMC4yNyBQTTs0OzI3OTM="/>
+        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTEtMzA7MTA6MTU6MDYgQU07MTsyMDA3"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTExLTMwOzA5OjQzOjIzIGFtOzE7MzA2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, p, q" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="5"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <for variable="q" start="1" end="i" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

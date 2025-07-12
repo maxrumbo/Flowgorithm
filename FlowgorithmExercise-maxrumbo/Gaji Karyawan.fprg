@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Gaji Karyawan"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-29 08:56:17 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTI5OzA4OjE3OjMwIHBtOzI5NzY="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTI5OzA4OjU2OjE3IHBtOzE7MzA5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hari, jumlahkaryawan, i" type="Integer" array="False" size=""/>
+            <declare name="gaji, pajak, bonus, pendapatan, total" type="Real" array="False" size=""/>
+            <assign variable="bonus" expression="(3/100)"/>
+            <assign variable="pajak" expression="(13/100)"/>
+            <assign variable="gaji" expression="100000"/>
+            <assign variable="jumlahkaryawan" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <input variable="jumlahkaryawan"/>
+            <for variable="i" start="1" end="jumlahkaryawan" direction="inc" step="1">
+                <input variable="hari"/>
+                <assign variable="pendapatan" expression="gaji*hari"/>
+                <if expression="hari&gt;30">
+                    <then>
+                        <assign variable="total" expression="pendapatan+pendapatan*bonus-pendapatan*pajak"/>
+                    </then>
+                    <else>
+                        <assign variable="total" expression="pendapatan*pajak"/>
+                    </else>
+                </if>
+                <output expression="total" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="save" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hari, jumlah, i" type="Integer" array="False" size=""/>
+            <declare name="gaji, pajak, bonus, pendapatan, total" type="Real" array="False" size=""/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="GajiKaryawan"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-29 04:52:20 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTI5OzA0OjMzOjAzIHBtOzI5NzA="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTI5OzA0OjUyOjIwIHBtOzE7MzA3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gaji, pajak, pendapatan, i" type="Integer" array="False" size=""/>
+            <declare name="hari" type="Integer" array="True" size="30"/>
+            <assign variable="i" expression="0"/>
+            <input variable="hari[i]"/>
+            <for variable="i" start="0" end="29" direction="inc" step="1">
+                <if expression="i=30">
+                    <then>
+                        <assign variable="gaji" expression="3000000"/>
+                    </then>
+                    <else/>
+                </if>
+                <for variable="i" start="0" end="1" direction="inc" step="1">
+                    <assign variable="hari[i]" expression="1"/>
+                    <assign variable="pajak" expression="13/100"/>
+                    <assign variable="gaji" expression="hari[i]*pajak"/>
+                </for>
+            </for>
+            <output expression="gaji" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

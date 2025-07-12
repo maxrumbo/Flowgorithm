@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Nama Hari"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-11 09:27:07 pm"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTExOzA4OjQ5OjI5IHBtOzI5ODg="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTA5LTExOzA5OjI3OjA3IHBtOzE7MzA4OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s, r, k, j" type="Boolean" array="False" size=""/>
+            <declare name="NamaHari, Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu" type="String" array="False" size=""/>
+            <input variable="s"/>
+            <if expression="s">
+                <then>
+                    <output expression="senin" newline="True"/>
+                </then>
+                <else>
+                    <output expression="selasa" newline="True"/>
+                </else>
+            </if>
+            <input variable="r"/>
+            <if expression="r">
+                <then>
+                    <output expression="rabu" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <input variable="k"/>
+            <if expression="k">
+                <then>
+                    <output expression="kamis" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <input variable="j"/>
+            <if expression="j">
+                <then>
+                    <output expression="jumat" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="NamaHari" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

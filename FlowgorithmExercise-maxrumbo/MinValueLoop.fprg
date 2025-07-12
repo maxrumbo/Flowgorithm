@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="nilai terkecil menggunakan looping"/>
+        <attribute name="authors" value="boyha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 03:32:48 pm"/>
+        <attribute name="created" value="Ym95aGE7Qk9ZOzIwMjQtMTAtMDI7MTE6MDE6MzMgQU07MjAxNA=="/>
+        <attribute name="edited" value="Ym95aGE7Qk9ZOzIwMjQtMTAtMDI7MTE6MDg6MTYgQU07MTsyMTMw"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTAyOzAzOjMyOjQ4IHBtOzE7MzA3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilai" type="Integer" array="True" size="10"/>
+            <declare name="hasil, i, angka1, angka2" type="Integer" array="False" size=""/>
+            <assign variable="angka1" expression="9999"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="nilai[i]"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="nilai[i]&lt;angka1">
+                    <then>
+                        <assign variable="hasil" expression="nilai[i]"/>
+                        <assign variable="angka1" expression="nilai[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
